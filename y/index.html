@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: viaoda;
+            src: url('./Viaoda_Libre/ViaodaLibre-Regular.ttf');
+        }
+        :root{
+            --text-color : white ;
+            --cursor-hand : url('./cursor.png');
+            --cursor-fish :  url('./output-onlinepngtools.png');
+            
+        }
+        * {
+            box-sizing: border-box;
+           
+        }
+
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+            height: 100%;
+         /* overflow-x: hidden; */
+        }
+
+        body {
+            background-color: black;
+            animation: body 4s ease-in infinite;
+        }
+        .first{
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+            cursor: var(--cursor-fish), auto;
+             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url("./images (3).jpeg");
+             width: 100%;
+             height: 100%;
+             background-repeat: no-repeat;
+             background-position: center top;
+             background-size: cover;
+             margin-top: -21px;
+             background-attachment: fixed;
+
+        }
+        .bubble {
+           cursor: inherit;
+            font-family: viaoda;
+            height: 350px;
+            width: 350px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 10px rgb(255, 255,255,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color) ;
+            transition: 1s;
+        }
+        .bubble:hover{
+            height: 410px;
+            width: 410px;
+           margin: 0;
+           color: transparent;
+           -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  box-shadow: inset 0 0 10px aqua;
+           
+        }
+        @keyframes pop {
+          0%{
+            box-shadow: inset 0 0 10px rgb(255, 255,255,0.9);
+            border: 1px solid;
+            
+          }
+          to{
+            box-shadow: inset 0 0 0 rgb(255, 255,255,0.9);
+          }
+        }
+        .cover{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(24, 23, 23, 0.363);
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            /* animation-delay: 5s; */
+            /* animation: cover 3s ease-out; */
+
+        }
+       
+        .cover .bubble:nth-child(1){
+            margin-left: 0;
+        }
+        .cover .bubble:nth-child(2){
+            margin-right: 0;
+        }
+        .second{
+            height: 100%;
+            width: 100%;
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url('./6509.jpg_wh300.jpg');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: url('./tree.png'), auto;
+        }
+        .cover .bubble{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        .second .div{
+            margin: 7px;
+            height: 450px;
+            width: 250px;
+            border-radius: 5px;
+            box-shadow: inset 0 0 10px rgb(255, 255,255,0.9);
+            cursor: var(--cursor-hand), auto;
+            transition: 1s;
+            cursor: var(--cursor-div),auto;
+        }
+        .second .div:hover{
+            transform: translateY(-15px);
+        }
+        .second img{
+            width: 80%;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            height: 50%;
+            display: block;
+            margin: 15px auto;
+            cursor: inherit;
+        }
+        .second {font-family: viaoda;
+        color: white;text-align: center;}
+
+        .third{
+            height: 100%;
+            width: 100%;
+            background-color: chartreuse;
+            background-image: url('./2b07f62987e987d4e53e84aa8b963b83.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            cursor: url('./output-onlinepngtools\(1\).png'), auto;
+        }
+        footer{
+            width: 100%;
+            height: 50vh;
+            background-size: 99vw;
+            /* background-repeat: repeat; */
+            background-position: center;
+            background-color: white;
+            /* background-attachment: fixed; */
+            cursor: url('./caveman_icon-icons.com_68042.png'),auto;
+            background-image: url('./toppng.com-jungle-border-clipart-jungle-clip-art-size-matters-by-robyn-peterma-842x621.png');
+        }
+        footer div{
+            display: flex;
+            justify-content: center;
+
+        }
+        footer img{
+            margin: 5px;
+            cursor: var(--cursor-hand), auto;
+            
+        }
+       
+        
+        @keyframes body {
+            0%{
+                   background-color: rgba(128, 255, 0, 0.534);
+            }
+            50%{
+                  background-color: rgba(0, 255, 255, 0.589);
+            }
+            100%{
+                 background-color: rgba(255, 255, 255, 0.548);
+            }
+        }
+        h5{
+            color: black;
+            text-align: center;
+            height: 10px;
+            width: 100%;
+        }
+        h5 a{
+            cursor: var(--cursor-hand), auto;
+            
+        }
+        
+  /* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+    </style> 
+    <div class="cover">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <!-- <img > -->
+   <div class="first">
+       <div class="bubble" onclick="javascript:location.href = '#b'">
+            <h2>Click here if you love earth</h2></div>
+    
+</div></div>
+        
+   
+    <div class="second" id="b">
+        <div class="div" style="--cursor-div:url('./lion.png')">
+        <img src="./lion.jpg" alt="">
+        <h3>LION</h3>
+        <p>Take care of the enviroment so I could still be the king of the jungle</p>
+    </div>
+        <div class="div" style="--cursor-div:url('./rhino.png')">
+        <img src="./images.jpg" >
+        <h3>RHINO</h3>
+        <p>We are on the verge of extinction</p>    
+    </div>
+        <div class="div" style="--cursor-div:url('./eagle.png')">
+            <img src="./eagle.jpg" alt="">
+            <h3>BALD EAGLE</h3>
+            <p>The concetration of harmful chemicals are is expanding</p>
+        </div>
+    </div>
+    <div class="third" id="c"></div>
+    <footer  id="a">
+        <h2 style="text-align: center;">DEVELOPER</h2>
+        <br>
+        <div>
+            <img src="./linkedin_icon-icons.com_65929.png" alt="">
+            <img src="./fiverr_logo_icon_168207.png" alt="">
+            <img src="./github_logo_icon_143772.png" alt="">
+        </div>
+        <h5><b><a href="http://sdaniekenan.herokuapp.com">More about the developer ? visit my site</a></b></h5>
+    </footer>
+    <script>
+        $(document).ready(()=>{
+            for(let i = 0; i < 12 ; i++ ){
+                document.getElementsByClassName('bubble')[i].style.top = `${Math.random()* 100}%`;
+                document.getElementsByClassName('bubble')[i].style.left = `${Math.random()* 100}%`;
+            }
+            $('.cover').animate({top:-1000},2000)
+        })
+    </script>   
+</body>
+
+</html>
